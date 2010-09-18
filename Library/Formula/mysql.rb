@@ -42,6 +42,7 @@ class Mysql <Formula
       "--with-extra-charsets=complex",
       "--with-ssl",
       "--without-readline", # Confusingly, means "use detected readline instead of included readline"
+      "--with-partition",
       "--enable-assembler",
       "--enable-thread-safe-client",
       "--enable-local-infile",
