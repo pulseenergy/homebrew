@@ -1,18 +1,18 @@
 require 'formula'
 
 class GitManuals < Formula
-  url 'http://kernel.org/pub/software/scm/git/git-manpages-1.7.2.3.tar.bz2'
-  md5 '2ef8d3959c832347c29885627ebc0682'
+  url 'http://kernel.org/pub/software/scm/git/git-manpages-1.7.3.3.tar.bz2'
+  md5 '554b648ee9859c73955978e65d9a8c94'
 end
 
 class GitHtmldocs < Formula
-  url 'http://kernel.org/pub/software/scm/git/git-htmldocs-1.7.2.3.tar.bz2'
-  md5 'e8505ed81506ee4ad6e15d149f366866'
+  url 'http://kernel.org/pub/software/scm/git/git-htmldocs-1.7.3.3.tar.bz2'
+  md5 'f88d5054e4aa4b3f6f7769e4784e6bd9'
 end
 
 class Git < Formula
-  url 'http://kernel.org/pub/software/scm/git/git-1.7.2.3.tar.bz2'
-  md5 'd88c06f6442156686deb4b4fbab0954c'
+  url 'http://kernel.org/pub/software/scm/git/git-1.7.3.3.tar.bz2'
+  md5 '0430440eeb7c037afd4254bc6fd2cce8'
   homepage 'http://git-scm.com'
 
   def install
@@ -36,6 +36,7 @@ class Git < Formula
     # clobbered on upgrade.)
 
     (prefix+'etc/bash_completion.d').install 'contrib/completion/git-completion.bash'
+    (share+'doc/git-core/contrib').install 'contrib/emacs'
 
     # Install git-p4
     bin.install 'contrib/fast-import/git-p4'
